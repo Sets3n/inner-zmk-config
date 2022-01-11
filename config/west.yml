@@ -1,12 +1,10 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
-    #- name: Sets3n
-    #  url-base: https://github.com/Sets3n
+    - name: Sets3n
+      url-base: https://github.com/Sets3n
   projects:
     - name: zmk
-      remote: zmkfirmware
+      remote: Sets3n
       revision: main
       import: app/west.yml
   self:
