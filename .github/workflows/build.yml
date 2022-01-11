@@ -33,16 +33,16 @@ jobs:
         run: west update
       - name: West Zephyr export
         run: west zephyr-export
-      - name: West Build (Peach Rev1)
+      - name: West Build (inner)
         run: west build -s zmk/app -b inner -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: Peach rev1 DTS File
+      - name: inner DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/inner.dts.pre.tmp
-      - name: Peach rev1 Kconfig file
+      - name: inner Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
         run: cp build/zephyr/zmk.uf2 inner.uf2
-      - name: Archive (Peach rev1)
+      - name: Archive (inner)
         uses: actions/upload-artifact@v2
         with:
           name: inner-zmk

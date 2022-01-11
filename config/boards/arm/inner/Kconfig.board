@@ -1,0 +1,6 @@
+# Copyright (c) 2022 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+# Accelerando Redsoil (Breakout for eByte E73-2G4M08S1C nrf52840 System-on-module) configuration
+config SHIELD_INNER
+    bool "inner"
+    depends on SOC_NRF52840_QIAA
