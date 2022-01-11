@@ -5,8 +5,9 @@
  */
 
 /dts-v1/;
+
 #include <nordic/nrf52840_qiaa.dtsi>
-#include <dt-bindings/zmk/matrix-transform.h>
+#include <dt-bindings/zmk/matrix_transform.h>
 
 / { 
     model = "inner";
@@ -117,21 +118,23 @@
     status = "okay";
 };
 
-&uart0 {
-    compatible = "nordic,nrf-uart";
-    current-speed = <115200>;
+// &uart0 {
+//     compatible = "nordic,nrf-uart";
+//     current-speed = <115200>;
+//     status = "okay";
+//     tx-pin = <30>;
+//     rx-pin = <31>;
+// };
+
+&usbd {
+    compatible = "nordic,nrf-usbd";
     status = "okay";
-    tx-pin = <30>;
-    rx-pin = <31>;
 };
 
-//&spi1 {
-//    compatible = "nordic,nrf-spim";
-//    status = "okay";
-//    sck-pin = <5>;
-//    mosi-pin = <0>;
-//    miso-pin = <1>;
-//};
+&spi1 {
+    compatible = "nordic,nrf-spim";
+    status = "okay";
+};
 
 &flash0 {
     /*
@@ -161,7 +164,6 @@
         storage_partition: partition@f8000 {
             label = "storage";
             reg = <0x000ec000 0x00008000>;
-            // reg = <0x000f8000 0x00008000>;
         };
         boot_partition: partition@f4000 {
             label = "adafruit_boot";
@@ -170,7 +172,3 @@
     };
 };
 
-&usbd {
-    compatible = "nordic,nrf-usbd";
-    status = "okay";
-};
