@@ -34,7 +34,7 @@ jobs:
       - name: West Zephyr export
         run: west zephyr-export
       - name: West Build (bt60)
-        run: west build -s zmk/app -b config/boards/arm/inner -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+        run: west build -s zmk/app -b inner -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
       - name: bt60 DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/inner.dts.pre.tmp
