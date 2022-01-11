@@ -1,0 +1,89 @@
+/*
+ * Copyright (c) 2021 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/ext_power.h>
+
+#define DEFAULT 0
+#define LOWER   1
+#define RAISE   2
+#define CONTROL 3
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+
+//**************************************************************
+//| ESC  | Q | W | E | R    | T | Y    | U | I | O | P | BKSP  |
+//| TAB  | A | S | D | F    | G | H    | J | K | L | " | ENTER |
+//| LSFT | Z | X | C | V    | B | B    | N | M | > | / | UP    | 
+//| RCTL | S |   |ALT|SPCFN1|   |SPCFN2|ALT|LFT|DON|RGT| RSFT  | 
+//**************************************************************
+            bindings = <
+//             &kp ESC             &kp N2       &kp N3       &kp N4       &kp N5       &kp N6       &kp N7       &kp N8       &kp N9       &kp N0       &kp MINUS    &kp EQUAL    &kp BSPC &kp SEMI   &kp COMMA  &kp LBKT     &kp RBKT     &kp BSLH
+               &kp ESC    &kp Q    &kp W  &kp E    &kp R              &kp T  &kp Y              &kp U    &kp I    &kp O    &kp P     &kp BSPC
+               &kp TAB    &kp A    &kp S  &kp D    &kp F              &kp G  &kp H              &kp J    &kp K    &kp L    &kp SQT   &kp RET
+               &kp LSHFT  &kp Z    &kp X  &kp C    &kp V              &kp B  &kp B              &kp N    &kp M    &kp DOT  &kp SLASH &kp UP
+               &kp LCTRL  &kp LGUI        &kp LALT &lt LOWER SPACE        &lt RAISE  SPACE      &kp ALT  &kp LEFT &kp DOWN &kp RIGHT &kp RSHFT
+
+             >;
+        };
+
+        lower_layer {
+
+//**********************************************************
+//| ~`   | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8  | 9  | 0 | DEL   |
+//| TAB  | ! | @ | # | $ | % | ^ | & | *  | (  | ) | |\    |
+//| LSFT | Z | X | C | V | B | B | N | M  | >  | / | PGUP  | 
+//| RCTL | S |   |ALT|SPC|   |SPC|ALT|HOME|PGDN|END| RSFT  | 
+//**********************************************************
+            bindings = <
+                &out GRAVE   &kp N1     &kp N2  &kp N3    &kp N4   &kp N5    &kp N6    &kp N7    &kp N8    &kp N9     &kp N0    &kp DEL
+                &bt BT_CLR   &kp EXLM,  &kp AT  &kp HASH  &kp DLR  &kp PERC  &kp CIRC  &kp AMPR  &kp ASTR  &k LPAR    &kp RPAR  &kp PIPE
+                &bt BT_SEL 0 &kp F7     &kp F8  &kp F9    &kp F10  &kp F11   &kp F12   &trans    &trans    &trans     &trans    &kp PG_UP
+                &bt BT_SEL 1 &trans             &trans    &trans             &trans    &trans    &kp HOME  &kp PG_DN  &kp END   &kp END
+            >;
+        };
+
+        raise_layer {
+
+//*********************************************************************
+//| ~`   | F1  | F2  | F3 | F4  | F5  | F6 | 7  | 8   | -_  | =+ |DEL |
+//| CAPS | F6  | F7  | F8 | F9  | F10 | -_ | =+ | [{  | ]}  | :; |'"  |
+//| LSFT | F11 | F12 |COPY|PASTE| B   | B  | N  | M   | >   | /  |PGUP| 
+//| RCTL | S   |     |ALT |SPC  |     |SPC |ALT |HOME |PGDN |END |MO3 | 
+//*********************************************************************
+            bindings = <
+                &out GRAVE   &kp F1   &kp F2  &kp F3    &kp F4    &kp F5   &kp F6    &kp F7    &kp F8    &kp CIRC   &kp AMPR   &kp DEL
+                &kp CAPS     &kp F6,  &kp F7  &kp F8    &kp F9    &kp F10  &kp CIRC  &kp AMPR  &kp ASTR  &k LPAR    &kp RPAR   &kp PIPE
+                &bt BT_SEL 0 &kp F11  &kp F12 &kp LC(c) &kp LC(v) &kp F11  &kp F12   &trans    &trans    &trans     &trans     &kp PG_UP
+                &bt BT_SEL 1 &trans           &trans    &trans             &trans    &trans    &kp HOME  &kp PG_DN  &kp END    &mo CONTROL
+            >;
+        };
+
+        control_layer {
+
+//*********************************************************************
+//|reset| BT1 | BT2 | BT3 | F4 | F5  | F6 | 7  | 8   | -_  | =+ | DEL |
+//| TAB | F6  | F7  | F8  | F9 | F10 | -_ | =+ | [{  | ]}  | :; | '"  |
+//| USB | F11 | F12 | C   | V  | B   | B  | N  | M   | >   | /  | PGUP| 
+//| BLE | S   |     | ALT |SPC |     |SPC |ALT |HOME |PGDN |END | RSFT|         | 
+//*********************************************************************
+            bindings = <
+                &out bootloader  &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4   &kp F6    &kp F7    &kp F8    &kp CIRC   &kp AMPR   &kp K_SLEEP
+                &bt BT_CLR       &kp C_MUTE     &kp C_VOL_DN  &kp C_VOL_UP    &kp F9          &kp F10        &kp CIRC  &kp AMPR  &kp ASTR  &k LPAR    &kp RPAR   &kp PIPE
+                &out OUT_USB     &kp C_BRI_DN   &kp K_BRI_UP  &kp LC(c)       &kp LC(v)       &kp F11        &kp F12   &trans    &trans    &trans     &trans     &kp PG_UP
+                &out_OUT_BLE     &bt OUT_TOG                  &trans          &trans                         &trans    &trans    &kp HOME  &kp PG_DN  &kp END    &mo CONTROL
+            >;
+        };
+
+    };
+};

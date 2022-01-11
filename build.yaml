@@ -14,6 +14,4 @@
 ---
 include:
   - board: bluemicro840_v1
-    shield: lily58_left
-  - board: bluemicro840_v1
-    shield: lily58_right
+    shield: inner
