@@ -56,11 +56,6 @@
          , <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
          ;
     };
-    aliases {
-        led0 = &led0;
-        sw0 = &button0;
-        sw1 = &button1;
-    };
     /* These aliases are provided for compatibility with samples */
     leds {
         compatible = "gpio-leds";
