@@ -4,13 +4,12 @@
  * SPDX-License-Identifier: MIT
  */
 
-/dts-v1/;
 
 #include <nordic/nrf52840_qiaa.dtsi>
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
-    model = "inner";
+    model = "INNER";
     compatible = "inner";
 
     chosen {
@@ -26,6 +25,10 @@
     status = "okay";
 };
 
+&gpiote {
+	status = "okay";
+};
+
 &gpio0 {
     status = "okay";
 };
@@ -34,16 +37,7 @@
     status = "okay";
 };
 
-// &uart0 {
-//     compatible = "nordic,nrf-uart";
-//     current-speed = <115200>;
-//     status = "okay";
-//     tx-pin = <30>;
-//     rx-pin = <31>;
-// };
-
 &usbd {
-    compatible = "nordic,nrf-usbd";
     status = "okay";
 };
 
@@ -77,7 +71,7 @@
          */
 
         /* Storage partition will be used by FCB/NFFS/NVS if enabled. */
-        storage_partition: partition@f8000 {
+        storage_partition: partition@ec000 {
             label = "storage";
             reg = <0x000ec000 0x00008000>;
         };
