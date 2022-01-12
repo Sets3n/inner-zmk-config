@@ -61,10 +61,10 @@
 //| RCTL | S   |     |ALT |SPC  |     |SPC |ALT |HOME |PGDN |END |MO3 | 
 //*********************************************************************
             bindings = <
-                &out GRAVE   &kp F1   &kp F2  &kp F3    &kp F4    &kp F5   &kp F6    &kp F7    &kp F8    &kp MINUS   &kp EQUAL   &kp DEL
-                &kp CAPS     &kp F6   &kp F7  &kp F8    &kp F9    &kp F10  &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT    &kp SEMI    &kp SQT
-                &bt BT_SEL 0 &kp F11  &kp F12 &kp LC(c) &kp LC(v) &kp F11  &kp F12   &trans    &trans    &trans      &trans      &kp PG_UP
-                &bt BT_SEL 1 &trans           &trans    &trans             &trans    &trans    &kp HOME  &kp PG_DN   &kp END     &mo CONTROL
+                &out GRAVE   &kp F1   &kp F2  &kp F3         &kp F4         &kp F5   &kp F6    &kp F7    &kp F8    &kp MINUS   &kp EQUAL   &kp DEL
+                &kp CAPS     &kp F6   &kp F7  &kp F8         &kp F9         &kp F10  &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT    &kp SEMI    &kp SQT
+                &bt BT_SEL 0 &kp F11  &kp F12 &kp LCTL(KC_C) &kp LCTL(KC_V) &kp F11  &kp F12   &trans    &trans    &trans      &trans      &kp PG_UP
+                &bt BT_SEL 1 &trans           &trans         &trans                  &trans    &trans    &kp HOME  &kp PG_DN   &kp END     &mo CONTROL
             >;
         };
 
@@ -79,7 +79,7 @@
             bindings = <
                 &out bootloader  &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4   &kp F6    &kp F7    &kp F8    &kp CIRC   &kp AMPR   &kp K_SLEEP
                 &bt BT_CLR       &kp C_MUTE     &kp C_VOL_DN  &kp C_VOL_UP    &kp F9          &kp F10        &kp CIRC  &kp AMPR  &kp ASTR  &kp LPAR   &kp RPAR   &kp PIPE
-                &out OUT_USB     &kp C_BRI_DN   &kp K_BRI_UP  &kp LC(c)       &kp LC(v)       &kp F11        &kp F12   &trans    &trans    &trans     &trans     &kp PG_UP
+                &out OUT_USB     &kp C_BRI_DN   &kp K_BRI_UP  &kp LCTL(KC_C)  &kp LCTL(KC_V)  &kp F11        &kp F12   &trans    &trans    &trans     &trans     &kp PG_UP
                 &out_OUT_BLE     &bt OUT_TOG                  &trans          &trans                         &trans    &trans    &kp HOME  &kp PG_DN  &kp END    &mo CONTROL
             >;
         };
