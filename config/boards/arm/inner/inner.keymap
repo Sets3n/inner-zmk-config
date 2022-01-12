@@ -77,10 +77,10 @@
 //| BLE | S   |     | ALT |SPC |     |SPC |ALT |HOME |PGDN |END | RSFT|         | 
 //*********************************************************************
             bindings = <
-                &out bootloader  &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4   &ext_power EP_TOG  &kp F7    &kp F8    &kp MINUS  &kp EQUAL  &kp K_SLEEP
-                &bt BT_CLR       &kp C_MUTE     &kp C_VOL_DN  &kp C_VOL_UP    &kp F9          &kp F10        &kp MINUS   	&kp EQUAL &kp LBKT  &kp RBKT   &kp SEMI   &kp SQT
-                &out OUT_USB     &kp C_BRI_DN   &kp K_BRI_UP  &kp K_SLEEP     &kp K_COFFEE    &kp F11        &kp F12    	&trans    &trans    &trans     &trans     &kp PG_UP
-                &out_OUT_BLE     &bt OUT_TOG                  &trans          &trans                         &trans     	&trans    &kp HOME  &kp PG_DN  &kp END    &trans
+                &bootloader   &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4   &ext_power EP_TOG  &kp F7    &kp F8    &kp MINUS  &kp EQUAL  &kp K_SLEEP
+                &bt BT_CLR    &kp C_MUTE     &kp C_VOL_DN  &kp C_VOL_UP    &kp F9          &kp F10        &kp MINUS   	&kp EQUAL &kp LBKT  &kp RBKT   &kp SEMI   &kp SQT
+                &out OUT_USB  &kp C_BRI_DN   &kp K_BRI_UP  &kp K_SLEEP     &kp K_COFFEE    &kp F11        &kp F12    	&trans    &trans    &trans     &trans     &kp PG_UP
+                &out OUT_BLE  &out OUT_TOG                 &trans          &trans                         &trans     	&trans    &kp HOME  &kp PG_DN  &kp END    &trans
             >;
         };
 
