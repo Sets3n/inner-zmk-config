@@ -56,6 +56,11 @@
          , <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
          ;
     };
+    aliases {
+        led0 = &led0;
+        sw0 = &button0;
+        sw1 = &button1;
+    };
     /* These aliases are provided for compatibility with samples */
     leds {
         compatible = "gpio-leds";
@@ -67,17 +72,17 @@
  
     };
 
-//    buttons {
-//        compatible = "gpio-keys";
-//        button0: button_0 {
-//            gpios = <&gpio0 13 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-//            label = "Push button switch";
-//        };
-//        button1: button_1 {
-//            gpios = <&gpio0 20 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-//            label = "Push button switch";
-//        };
-//    };
+    buttons {
+        compatible = "gpio-keys";
+        button0: button_0 {
+            gpios = <&gpio0 13 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            label = "Push button switch";
+        };
+        button1: button_1 {
+            gpios = <&gpio0 20 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            label = "Push button switch";
+        };
+    };
 
     ext-power {
         compatible = "zmk,ext-power-generic";
