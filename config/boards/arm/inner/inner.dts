@@ -93,3 +93,10 @@
         full-ohms = <(2000000 + 806000)>;
     };
 };
+
+&spi1 {
+  mosi-pin = <4>;
+  // Unused pins, needed for SPI definition, but not used by thews2812 driver itself.
+  sck-pin = <6>;
+  miso-pin = <8>;
+};
