@@ -10,7 +10,6 @@ supported:
   - adc
   - usb_device
   - ble
-  - RGB
   - ieee802154
   - pwm
   - watchdog
