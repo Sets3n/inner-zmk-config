@@ -59,9 +59,8 @@
     
     leds {
         compatible = "gpio-leds";
-
-        status_led: led_0 {
-            label = "STATUS LED";
+        blue_led: led_0 {
+            label = "Blue LED";
             gpios = <&gpio1 10 GPIO_ACTIVE_HIGH>;
         };
  

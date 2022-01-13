@@ -32,4 +32,8 @@ config ZMK_BATTERY_VOLTAGE_DIVIDER
 config ZMK_KEYBOARD_NAME
 	default "iNNER"
 
+config IEEE802154_NRF5
+	default y
+	depends on IEEE802154
+
 endif # BOARD_INNER
