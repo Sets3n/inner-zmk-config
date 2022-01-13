@@ -28,10 +28,10 @@
 //| RCTL | S |   |ALT|SPCFN1|   |SPCFN2|ALT|LFT|DON|RGT| RSFT  | 
 //**************************************************************
             bindings = <
-                &kp ESC    &kp Q    &kp W  &kp E    &kp R              &kp T  &kp Y              &kp U     &kp I    &kp O    &kp P     &kp BSPC
-                &kp TAB    &kp A    &kp S  &kp D    &kp F              &kp G  &kp H              &kp J     &kp K    &kp L    &kp SEMI   &kp RET
-                &kp LSHFT  &kp Z    &kp X  &kp C    &kp V              &kp B  &kp B              &kp N     &kp M    &kp DOT  &kp SLASH &kp UP
-                &kp LCTRL  &kp LGUI        &kp LALT &lt LOWER SPACE           &lt RAISE  SPACE   &kp RALT  &kp LEFT &kp DOWN &kp RIGHT &kp RSHFT
+                &kp ESC    &kp Q    &kp W  &kp E     &kp R              &kp T  &kp Y              &kp U     &kp I    &kp O     &kp P      &kp BSPC
+                &kp TAB    &kp A    &kp S  &kp D     &kp F              &kp G  &kp H              &kp J     &kp K    &kp L     &kp SEMI   &kp RET
+                &kp LSHFT  &kp Z    &kp X  &kp C     &kp V              &kp B  &kp B              &kp N     &kp M    &kp DOT   &kp SLASH  &kp UP
+                &kp LCTRL  &kp LGUI        &kp LALT  &lt LOWER SPACE           &lt RAISE  SPACE   &kp RALT  &kp LEFT &kp DOWN  &kp RIGHT  &kp RSHFT
 
             >;
         };
