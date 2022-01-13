@@ -57,27 +57,27 @@
          ;
     };
     /* These aliases are provided for compatibility with samples */
-//    leds {
-//        compatible = "gpio-leds";
-//
-//        status_led: led_0 {
-//            label = "STATUS LED";
-//            gpios = <&gpio1 13 GPIO_ACTIVE_HIGH>;
-//        };
-// 
-//    };
-//
-//    buttons {
-//        compatible = "gpio-keys";
-//        button0: button_0 {
-//            gpios = <&gpio0 13 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-//            label = "Push button switch";
-//        };
-//        button1: button_1 {
-//            gpios = <&gpio0 20 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-//            label = "Push button switch";
-//        };
-//    };
+    leds {
+        compatible = "gpio-leds";
+
+        status_led: led_0 {
+            label = "STATUS LED";
+            gpios = <&gpio1 13 GPIO_ACTIVE_HIGH>;
+        };
+ 
+    };
+
+    buttons {
+        compatible = "gpio-keys";
+        button0: button_0 {
+            gpios = <&gpio0 13 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            label = "Push button switch";
+        };
+        button1: button_1 {
+            gpios = <&gpio0 20 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            label = "Push button switch";
+        };
+    };
 
     ext-power {
         compatible = "zmk,ext-power-generic";
