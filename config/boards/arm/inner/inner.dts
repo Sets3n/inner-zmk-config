@@ -60,7 +60,7 @@
     leds {
         compatible = "gpio-leds";
         status_led: led_0 {
-            gpios = <&gpio1 10 0>;
+            gpios = <&gpio1 4 0>;
             label = "Status LED";
         };
  
@@ -90,8 +90,8 @@
 };
 
 &spi1 {
-  mosi-pin = <4>;
-  // Unused pins, needed for SPI definition, but not used by thews2812 driver itself.
-  sck-pin = <6>;
-  miso-pin = <8>;
+    status = "okey";
+    mosi-pin = <0>;
+    sck-pin = <5>;
+    miso-pin = <1>;
 };
