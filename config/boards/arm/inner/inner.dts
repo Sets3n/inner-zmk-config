@@ -43,7 +43,7 @@
          , <&gpio0 12 GPIO_ACTIVE_HIGH>
          , <&gpio0  6 GPIO_ACTIVE_HIGH>
          , <&gpio0  8 GPIO_ACTIVE_HIGH>
-         , <&gpio0  5 GPIO_ACTIVE_HIGH>
+         , <&gpio0  5 GPIO_ACTIVE_HIGH> 
          , <&gpio0 13 GPIO_ACTIVE_HIGH>
          , <&gpio0 24 GPIO_ACTIVE_HIGH>
          , <&gpio0 20 GPIO_ACTIVE_HIGH>
@@ -60,7 +60,7 @@
     leds {
         compatible = "gpio-leds";
         status_led: led_0 {
-            gpios = <&gpio1 4 0>;
+            gpios = <&gpio1 10 GPIO_ACTIVE_LOW>;
             label = "Status LED";
         };
  
@@ -89,8 +89,8 @@
     };
 };
 
-&spi1 {
-    mosi-pin = <0>;
-    sck-pin = <5>;
-    miso-pin = <1>;
-};
+//&spi1 {
+//    mosi-pin = <0>;
+//    sck-pin = <5>;
+//    miso-pin = <1>;
+//};
