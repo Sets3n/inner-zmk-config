@@ -59,31 +59,31 @@
     
     leds {
         compatible = "gpio-leds";
-        blue_led: led_0 {
-            label = "Blue LED";
-            gpios = <&gpio1 10 GPIO_ACTIVE_HIGH>;
+        status_led: led_0 {
+            gpios = <&gpio1 10 0>;
+            label = "Status LED";
         };
  
     };
 
-    buttons {
-        compatible = "gpio-keys";
-        button0: button_0 {
-            gpios = <&gpio0 18 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-            label = "Push button switch";
-        };
-    };
+//    buttons {
+//        compatible = "gpio-keys";
+//        button0: button_0 {
+//            gpios = <&gpio0 18 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+//            label = "Push button switch";
+//        };
+//    };
 
-    ext-power {
-        compatible = "zmk,ext-power-generic";
-        label = "EXT_POWER";
-        control-gpios = <&gpio0 4 GPIO_ACTIVE_LOW>;
-    };
+//    ext-power {
+//        compatible = "zmk,ext-power-generic";
+//        label = "EXT_POWER";
+//        control-gpios = <&gpio0 4 GPIO_ACTIVE_LOW>;
+//    };
 
     vbatt {
         compatible = "zmk,battery-voltage-divider";
         label = "BATTERY";
-        io-channels = <&adc 7>;
+        io-channels = <&adc 3>;
         output-ohms = <2000000>;
         full-ohms = <(2000000 + 806000)>;
     };
