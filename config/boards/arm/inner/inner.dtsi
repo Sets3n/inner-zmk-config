@@ -8,30 +8,29 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
-	model = "INNER";
-	compatible = "Sets3n,inner";
-
-	chosen {
-		zephyr,code-partition = &code_partition;
-		zephyr,console = &uart0;
-		zephyr,sram = &sram0;
-		zephyr,flash = &flash0;
-		zmk,kscan = &kscan0;
-		zmk,matrix_transform = &default_transform;
-		zmk,underglow = &led_strip;
-	};
-     leds {
-             compatible = "gpio-leds";
-             led0: led_0 {
-                     gpios = <&gpio1 10 0>;
-                     label = "LED 0";
-             };
-             /* ... other LEDs ... */
-     };
-     aliases {
-             led0 = &led0; /* now you support the blinky sample! */
-             /* other aliases go here */
-     };
+    model = "INNER";
+    compatible = "Sets3n,inner";
+    
+    chosen {
+    	zephyr,code-partition = &code_partition;
+    	zephyr,console = &uart0;
+    	zephyr,sram = &sram0;
+    	zephyr,flash = &flash0;
+    	zmk,kscan = &kscan0;
+    	zmk,matrix_transform = &default_transform;
+    };
+    leds {
+            compatible = "gpio-leds";
+            led0: led_0 {
+                    gpios = <&gpio1 10 0>;
+                    label = "LED 0";
+            };
+            /* ... other LEDs ... */
+    };
+    aliases {
+            led0 = &led0; /* now you support the blinky sample! */
+            /* other aliases go here */
+    };
 
 };
 
