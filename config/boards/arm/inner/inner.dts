@@ -110,6 +110,9 @@
 &spi1 {
 	compatible = "nordic,nrf-spim";
 	status = "okay";
+	mosi-pin = <0>;
+	sck-pin = <5>;
+	miso-pin = <1>;
 };
 
 &usbd {
