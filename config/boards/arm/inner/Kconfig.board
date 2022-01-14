@@ -8,13 +8,13 @@ config BOARD_INNER
 config SOC_NRF52840_QIAA
     bool "NRF52840_QIAA"
     select SOC_NRF52840
-    depends on BOARD_INNER
+    depends on SOC_NRF52840_QIAA
 # Use external 32.768 kHz clock source
 config SOC_IT8XXX2_EXT_32K
     bool "Use external 32.768 kHz clock source"
-    depends on BOARD_INNER
+    depends on SOC_NRF52840_QIAA
 
 config GPIO_AS_PINRESET
     bool
     default y
-    depends on BOARD_INNER
+    depends on SOC_NRF52840_QIAA
