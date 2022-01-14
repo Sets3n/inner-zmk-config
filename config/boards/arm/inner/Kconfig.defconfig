@@ -44,4 +44,7 @@ config GPIO_AS_PINRESET
     bool
     default y
 
+config ZMK_KSCAN_MATRIX_POLLING
+    default y
+
 endif # BOARD_INNER
