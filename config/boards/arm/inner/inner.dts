@@ -11,8 +11,8 @@
 / { 
 
     chosen {
-        zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
+              zmk,kscan = &kscan0;
+              zmk,matrix_transform = &default_transform;
     };
 
 
@@ -57,18 +57,6 @@
          ;
     };
     
-    leds {
-        compatible = "gpio-leds";
-        led_0: led_status { //p1.10
-            gpios = <&gpio1 10 GPIO_ACTIVE_LOW>;
-            label = "Status LED";
-        };
- 
-    };
-    /* These aliases are provided for compatibility with samples */
-    aliases {
-        led_status = &led_0;
-    };
 
 //    buttons {
 //        compatible = "gpio-keys";
