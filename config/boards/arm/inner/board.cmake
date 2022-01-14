@@ -1,6 +1,6 @@
 # Copyright (c) 2022 The ZMK Contributors
 # SPDX-License-Identifier: MIT
-# iNNER (with eByte E73-2G4M08S1C nrf52840 System-on-module) configuration
+# iNNER (with eByte E73-2G4M08S1C nrf52840) configuration
 
 #set(OPENOCD_NRF5_SUBFAMILY nrf52)
 #board_runner_args(nrfjprog "--nrf-family=NRF52" "--softreset")

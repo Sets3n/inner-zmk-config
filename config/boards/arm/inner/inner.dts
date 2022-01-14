@@ -29,7 +29,7 @@
         >;
     };
 
-    kscan0: kscan_0 {
+    kscan0: kscan {
      compatible = "zmk,kscan-gpio-matrix";
      label = "KSCAN";
      diode-direction = "col2row";
@@ -59,11 +59,15 @@
     
     leds {
         compatible = "gpio-leds";
-        status_led: led_0 {
+        led_0: led_status { //p1.10
             gpios = <&gpio1 10 GPIO_ACTIVE_LOW>;
             label = "Status LED";
         };
  
+    };
+    /* These aliases are provided for compatibility with samples */
+    aliases {
+        led_status = &led_0;
     };
 
 //    buttons {
