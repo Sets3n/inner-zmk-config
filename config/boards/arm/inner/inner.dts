@@ -40,7 +40,7 @@
         vbatt {
         	compatible = "zmk,battery-voltage-divider";
         	label = "BATTERY";
-        	io-channels = <&adc 2>;
+        	io-channels = <&adc 7>;
         	output-ohms = <2000000>;
         	full-ohms = <(2000000 + 806000)>;
         };
@@ -104,14 +104,6 @@
 
 &gpio1 {
 	status = "okay";
-};
-
-&spi1 {
-	compatible = "nordic,nrf-spim";
-	status = "okay";
-	mosi-pin = <0>;
-	sck-pin = <5>;
-	miso-pin = <1>;
 };
 
 &usbd {
