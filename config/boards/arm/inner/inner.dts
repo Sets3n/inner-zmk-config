@@ -38,13 +38,14 @@
 		control-gpios = <&gpio0 4 GPIO_ACTIVE_LOW>;
 	};
 
-	vbatt {
-		compatible = "zmk,battery-voltage-divider";
-		label = "BATTERY";
-		output-ohms = <2000000>;
-		full-ohms = <(2000000 + 806000)>;
-	};
-
+/*	vbatt {
+ *		compatible = "zmk,battery-voltage-divider";
+ *		label = "BATTERY";
+ *		io-channels = <&adc 6>;
+ *		output-ohms = <2000000>;
+ *		full-ohms = <(2000000 + 806000)>;
+ *	};
+ */
 	kscan0: kscan {
 		compatible = "zmk,kscan-gpio-matrix";
 		label = "KSCAN";
