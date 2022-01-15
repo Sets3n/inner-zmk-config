@@ -36,11 +36,7 @@ config IEEE802154_NRF5
 	default y
 	depends on IEEE802154
 
-#config GPIO_AS_PINRESET
-#    bool
-#    default y
-#
-#config ZMK_KSCAN_MATRIX_POLLING
-#    default y
+config ZMK_KSCAN_MATRIX_POLLING
+    default y
 
 endif # BOARD_INNER
