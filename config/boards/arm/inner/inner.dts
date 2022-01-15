@@ -14,7 +14,6 @@
     
 	chosen {
 		zephyr,code-partition = &code_partition;
-		zephyr,console = &uart0;
 		zephyr,sram = &sram0;
 		zephyr,flash = &flash0;
 		zmk,kscan = &kscan0;
@@ -41,7 +40,7 @@
         vbatt {
         	compatible = "zmk,battery-voltage-divider";
         	label = "BATTERY";
-        	io-channels = <&adc 0 4>;
+        	io-channels = <&adc 2>;
         	output-ohms = <2000000>;
         	full-ohms = <(2000000 + 806000)>;
         };
@@ -119,14 +118,6 @@
 	status = "okay";
 };
 
-
-&uart0 {
-	compatible = "nordic,nrf-uart";
-	current-speed = <115200>;
-	status = "okay";
-	tx-pin = <30>;
-	rx-pin = <31>;
-};
 
 &flash0 {
 	/*
