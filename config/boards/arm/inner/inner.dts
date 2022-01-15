@@ -2,7 +2,7 @@
  * Copyright (c) 2022 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
- */
+*/
 
 /dts-v1/;
 #include <nordic/nrf52840_qiaa.dtsi>
