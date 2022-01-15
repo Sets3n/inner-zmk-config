@@ -62,9 +62,9 @@
 //*********************************************************************
             bindings = <
                 &kp GRAVE  &kp F1   &kp F2  &kp F3  &kp F4  &kp F5   &kp F6    &kp F7    &kp F8    &kp MINUS   &kp EQUAL   &kp DEL
-                &kp CAPS    &kp F6   &kp F7  &kp F8  &kp F9  &kp F10  &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT    &kp SEMI    &kp SQT
-                &kp LSHFT   &kp F11  &kp F12 &kp C   &kp V   &kp F11  &kp UNDER &kp PLUS  &kp GT    &trans      &trans      &kp PG_UP
-                &kp LCTRL   &trans           &trans  &trans           &trans    &trans    &kp HOME  &kp PG_DN   &kp END     &kp RSHFT
+                &kp CAPS   &kp F6   &kp F7  &kp F8  &kp F9  &kp F10  &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT    &kp SEMI    &kp SQT
+                &kp LSHFT  &kp F11  &kp F12 &kp C   &kp V   &kp F11  &kp UNDER &kp PLUS  &kp GT    &trans      &trans      &kp PG_UP
+                &kp LCTRL  &trans           &trans  &trans           &trans    &trans    &kp HOME  &kp PG_DN   &kp END     &kp RSHFT
             >;
         };
 
